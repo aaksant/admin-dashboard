@@ -79,6 +79,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 20px;
+  padding: var(--grid-pd);
 }
 
 .analytics {
@@ -88,12 +89,12 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 12px;
   grid-auto-rows: max-content;
-  border: 1px dashed black;
   padding: var(--grid-pd);
 }
 
 .menu-title {
   grid-column: 1 / -1;
+  margin-bottom: 15px;
 }
 
 .analytics-card {
@@ -130,20 +131,14 @@ a {
 }
 
 .contacts-container {
-  border: 1px solid black;
   padding: var(--grid-pd);
-}
-
-.menu-info {
-  font-size: 0.75rem;
-  margin-top: 0;
 }
 
 form > div {
   margin-bottom: 10px;
 }
 
-.checkbox-container {
+.checkbox-row {
   display: flex;
   align-items: center;
   border-bottom: 2px solid var(--primary-gray);
@@ -201,4 +196,21 @@ input[type='checkbox']:hover:checked + label {
 
 input[type='checkbox']:checked + label::after {
   opacity: 1;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-gray);
+}
+
+.more-info {
+  font-size: .75rem;
+}
+
+.contact-row .control {
+  margin-left: auto;
 }
