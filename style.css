@@ -78,6 +78,8 @@ a {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: max-content max-content;
+  gap: 25px;
+  padding: var(--grid-pd);
 }
 
 .analytics {
@@ -219,18 +221,18 @@ input[type='checkbox']:checked + label::after {
 }
 
 .reviews-row {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .reviews-row:nth-child(even) {
-  align-items: flex-end;
   text-align: right;
 }
 
-.reviews-row .more-info {
-  border-bottom: 1px solid var(--primary-gray);
+.reviews-row .more-info,
+.announcements-row .more-info {
+  border-bottom: 2px solid var(--primary-gray);
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
@@ -238,4 +240,23 @@ input[type='checkbox']:checked + label::after {
 .review {
   font-style: italic;
   font-weight: lighter;
+}
+
+.announcements {
+  grid-column: 5 / -1;
+  padding: var(--grid-pd);
+}
+
+.announcements-info-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  padding: var(--grid-pd);
+}
+
+.announcements-row {
+  margin-bottom: 20px;
+}
+
+.content {
+  font-size: .825rem;
 }
