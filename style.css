@@ -30,6 +30,18 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--primary-blue);
 }
 
+body::-webkit-scrollbar:horizontal {
+  height: .4rem;
+}
+
+body::-webkit-scrollbar-track:horizontal {
+  background-color: var(--primary-gray);
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--primary-blue);
+}
+
 ul {
   list-style-type: none;
 }
@@ -68,6 +80,10 @@ a {
   color: black;
 }
 
+.main-nav {
+  border-bottom: 3px solid var(--primary-gray);
+}
+
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -80,7 +96,7 @@ a {
   font-size: 1.5rem;
 }
 
-.other-menu {
+.side-menu {
   grid-column: 2 / 3;
   display: flex;
   justify-content: space-evenly;
@@ -114,19 +130,16 @@ a {
   padding: var(--grid-pd);
 }
 
-.description {
-  font-size: 0.75rem;
-}
-
 .plot img {
   width: 100%;
-  height: 40%;
+  height: auto;
 }
 
 .control {
   display: flex;
   justify-content: flex-end;
   gap: 16px;
+  margin-left: auto;
 }
 
 .tasks-contacts {
@@ -136,10 +149,7 @@ a {
   grid-template-rows: 1fr 1fr;
 }
 
-.tasks-container {
-  padding: var(--grid-pd);
-}
-
+.tasks-container,
 .contacts-container {
   padding: var(--grid-pd);
 }
@@ -206,7 +216,6 @@ input[type='checkbox']:checked + label::after {
 
 .contact-row {
   display: flex;
-  align-items: center;
   gap: 15px;
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -217,33 +226,30 @@ input[type='checkbox']:checked + label::after {
   font-size: .75rem;
 }
 
-.contact-row .control {
-  margin-left: auto;
-}
-
 .reviews {
   grid-column: 1 / 5;
   padding: var(--grid-pd);
 }
 
-.reviews-info-container {
+.reviews-container {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   padding: var(--grid-pd);
 }
 
-.reviews-row {
+.review-row,
+.announcement-row {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.reviews-row:nth-child(even) {
+.review-row:nth-child(even) {
   text-align: right;
 }
 
-.reviews-row .more-info,
-.announcements-row .more-info {
+.review-row .more-info,
+.announcement-row .more-info {
   border-bottom: 2px solid var(--primary-gray);
   margin-bottom: 5px;
   padding-bottom: 5px;
@@ -259,16 +265,12 @@ input[type='checkbox']:checked + label::after {
   padding: var(--grid-pd);
 }
 
-.announcements-info-container {
+.announcements-container {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   padding: var(--grid-pd);
 }
 
-.announcements-row {
-  margin-bottom: 20px;
-}
-
-.content {
+.announcement-content {
   font-size: .825rem;
 }
