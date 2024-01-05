@@ -311,6 +311,8 @@ input[type='checkbox']:checked + label::after {
   border-bottom: 2px solid var(--primary-gray);
   margin-bottom: 5px;
   padding-bottom: 5px;
+  color: var(--primary-purple);
+  font-weight: 600;
 }
 
 .review {
@@ -331,4 +333,5 @@ input[type='checkbox']:checked + label::after {
 
 .announcement-content {
   font-size: 0.825rem;
+  font-weight: lighter;
 }
